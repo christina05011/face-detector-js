@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚉</text></svg>"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face detection</title>
+    <meta
+      name="description"
+      content="Proyecto del Laboratorio de Platzi Profesional de JavaScript con Web APIs y Face Detection"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+<style>
+  .upload {
+    background-color: rgb(175, 171, 176);
+    color: #000;
+    border-radius: 0.8rem;
+    width: 500px;
+    align-self: center;
+  }
+
+</style>
+
+  <body
+    class="text-gray-700 bg-slate-700 bg-no-repeat bg-cover"
+    style="background-image: url(bg3.gif)"
+  >
+    <main class="w-full flex min-h-screen h-full">
+      <div class="sm:w-2/3 flex items-center justify-center p-4 sm:p-8">
+        <div
+          class="relative overflow-hidden border-8 sm:border-16 border-white shadow-lg js-media-container"
+        ></div>
+      </div>
+      <sidebar class="bg-white sm:w-1/3 p-4 sm:p-8 flex flex-col">
+        <header class="border-b border-gray-200 py-6">
+          <h1 class="text-center text-gray-900 sm:text-8xl md:text-8xl">⚉ Face detection ⚉</h1>
+        </header>
+        <section>
+          <div x-data="{ open: false }" class="border-b border-gray-200 py-6">
+            <h3 class="-my-3 flow-root font-medium">
+              <button
+                type="button"
+                data-control="toggle"
+                class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500"
+                aria-controls="js-toggle-options"
+                aria-expanded="false"
+                data-toggle-extra-targets="svg"
+              >
+                <span class="font-medium text-gray-900 sm:text-5xl md:text-5xl">Options</span>
+                <span class="ml-6 flex items-center">
+                  <svg
+                    class="h-50 w-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="h-5 w-5 hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H3.75A.75.75 0 013 10z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+            </h3>
+            <div class="pt-6 hidden" id="js-toggle-options">
+              <div class="space-y-4" id="js-options"></div>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 py-6" style="font-size: x-large">
+            <h3 class="-my-3 bg-white py-3 text-sm font-medium text-gray-900 sm:text-5xl md:text-5xl">
+              Filters
+            </h3>
+            <div class="pt-6">
+              <div class="space-y-4" id="js-filters"></div>
+            </div>
+          </div>
+
+        </section>
+        
+        <button class="font-extrabold border-16 sm:text-5xl md:text-5xl upload">UPLOAD</button>
+        <input type="file" id="fileInput" style="display: none;" />
+
+        <footer
+          class="w-full text-center mt-auto px-2 pt-6 text-xs text-gray-400"
+        >
+          <p>
+            Made by
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/christina05011"
+              >❁ @christina05011 ❁</a
+            >
+            inspired by course of
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://twitter.com/platzi"
+              >@platzi</a
+            >
+          </p>
+        </footer>
+      </sidebar>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .h-4 {
+        height:3rem;
+    }
+    .w-4 {
+        width: 3rem;
+    }
+    .rounded {
+        border-radius: 0.8rem;
+    }
+}
+
