@@ -5,7 +5,7 @@ This is a Face Detector from the Platzi course "Laboratorio de JavaScript: Crea 
 This project has an extra tool from the original project of the Platzi course: 
 
 --------------------------------------------------------------------------------------------------------------
- > You can upload your images from the "Directory Public" and prove the algorithm with more than one image!  
+ > You can upload your images from the "Public Directory" and prove the algorithm with more than one image!  
 --------------------------------------------------------------------------------------------------------------
 
 ## Instructions to run the project:
