@@ -1,6 +1,6 @@
 # Project Face Detector with JavaScript
 
-This a Face Detector from the Platzi course "Laboratorio de JavaScript: Crea tu App de Filtros y Detección de Rostros", using JavaScript.
+This is a Face Detector from the Platzi course "Laboratorio de JavaScript: Crea tu App de Filtros y Detección de Rostros", using JavaScript.
 
 This project has an extra tool from the original project of the Platzi course: 
 
